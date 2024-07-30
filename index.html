@@ -1,71 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youtueb Clone</title>
-    <link
-      rel="shortcut icon"
-      href="https://thumbs.dreamstime.com/b/youtube-icon-illustration-youtube-app-logo-social-media-icon-youtube-icon-illustration-youtube-app-logo-social-media-icon-305513185.jpg"
-      type="image/x-icon"
-    />
-    <!-- font awesome cdn  -->
+    <title>YouTube Clone</title>
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/b/youtube-icon-illustration-youtube-app-logo-social-media-icon-youtube-icon-illustration-youtube-app-logo-social-media-icon-305513185.jpg" type="image/x-icon" />
+    <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <!--  Youtube navbar  -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-              <div class="flex items-center">
-                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
-                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                      </svg>
-                  </button>
-                  <a href="#" class="ml-4">
-                      <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
-                  </a>
-              </div>
-              <div class="flex-1 flex items-center justify-center px-2">
-                  <div class="max-w-lg w-full lg:max-w-xs">
-                      <label for="search" class="sr-only">Search</label>
-                      <div class="relative">
-                          <input id="search" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-500 sm:text-sm" placeholder="Search" type="search">
-                          <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                              <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                  <path fill-rule="evenodd" d="M13 7a6 6 0 11-12 0 6 6 0 0112 0zm-1 8a8 8 0 110-16 8 8 0 010 16z" clip-rule="evenodd"></path>
-                              </svg>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
-                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                  </button>
-                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
-                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h18M3 12h18m-9 4h9"></path>
-                      </svg>
-                  </button>
-                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
-                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                      </svg>
-                  </button>
-                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
-                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18l9-9 9 9V3z"></path>
-                      </svg>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </nav>
-  </body>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        
+        .chip {
+            transition: background-color 0.3s ease;
+        }
+        .chip:hover {
+            background-color:#3b82f6;
+            color:white
+        }
+        .video-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+       
+    </style>
+</head>
+<body style="background-color: #0F0F0F"">
+    <!-- Top Navbar -->
+    <nav style="background-color: #0F0F0F" class="navbar-bg fixed w-full z-50 shadow-md ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <button class="text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                    <a href="#" class="ml-4 text-white">
+                        <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center px-2">
+                    <div class="max-w-lg w-full lg:max-w-xs">
+                        <label for="search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <input id="search" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-full leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-red-500 sm:text-sm" placeholder="Search" type="search">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ml-2 text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-microphone fa-lg"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-video fa-lg"></i>
+                    </button>
+                    <button class="text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-th fa-lg"></i>
+                    </button>
+                    <button class="text-white hover:text-gray-200 focus:outline-none">
+                        <i class="fas fa-bell fa-lg"></i>
+                    </button>
+                    <div class="relative">
+                        <button class="text-white hover:text-gray-200 focus:outline-none">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-1">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Channel</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <nav class="navbar-bg shadow-md fixed w-full bottom-0 z-50  rounded-lg">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex gap-2 justify-between h-16 bg-blue-500 px-3">
+                <a href="#" class="flex gap-2  flex-col items-center justify-center text-white hover:text-gray-200 focus:text-gray-200">
+                    <i class="fas fa-home fa-lg"></i>
+                    <span class="text-sm">Home</span>
+                </a>
+                <a href="#" class="flex gap-2 flex-col items-center justify-center text-white hover:text-gray-200 focus:text-gray-200">
+                    <i class="fas fa-compass fa-lg"></i>
+                    <span class="text-sm">Explore</span>
+                </a>
+                <a href="#" class="flex gap-2 flex-col items-center justify-center text-white hover:text-gray-200 focus:text-gray-200">
+                    <i class="fas fa-plus-circle fa-lg"></i>
+                    <span class="text-sm">Create</span>
+                </a>
+                <a href="#" class="flex gap-2 flex-col items-center justify-center text-white hover:text-gray-200 focus:text-gray-200">
+                    <i class="fas fa-box-open fa-lg"></i>
+                    <span class="text-sm">Subscriptions</span>
+                </a>
+                <a href="#" class="flex gap-2 flex-col items-center justify-center text-white hover:text-gray-200 focus:text-gray-200">
+                    <i class="fas fa-history fa-lg"></i>
+                    <span class="text-sm">Library</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content to give space for fixed navbars -->
+    <div style="background-color: #0F0F0F;" class="pt-20 pb-20 w-full  ">
+        <div class="text-xs w-full">
+            <div id="chips-wrapper" class="style-scope ytd-feed-filter-chip-bar-renderer py-4 ">
+                <div id="chips-content" class="style-scope ytd-feed-filter-chip-bar-renderer flex justify-center items-center space-x-2  h-8 gap-2 max-w-7xl mx-auto">
+                    <div class="chip bg-blue-500 text-white px-3 py-1 cursor-pointer">All</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">News</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Music</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Mixes</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Live</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Web Development</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Cricket</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Wickets</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">APIs</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Reverberation</div>
+
+                   
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Thoughts</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Dramedy</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Thrillers</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Podcasts</div>
+                    <div class="chip bg-gray-200 text-gray-800 px-3 py-1 cursor-pointer">Music</div>
+                    <span>>></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Cards -->
+    <div class="container mx-auto mt--16 px-4">
+        <div class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mx-auto sm:wf md:gap-3 lg:gap-6">
+            <!-- Video Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/cj--E3jn8rA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDbmfD9TEJa_0bf-B87z3zhcoZmxA" alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">কোটা: শোক দিবস, লাল কাপড়ে প্রতিবাদ, জামায়াত নিষিদ্ধের সম্ভাবনা -আরো যা ঘটেছে ।BBC Bangla</h3>
+                    <p class="text-sm text-gray-600 mb-1">BBC News বাংলা</p>
+                    <p class="text-sm text-gray-600">1M views • 1 day ago</p>
+                </div>
+            </div>
+            <!-- Video Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/L4sEDceD_Zw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyu2rpdpXv802czxaaEk2feGtvew" alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">দাবি ও আন্দোলন নিয়ে যে কথা বলে গিয়েছিলেন নিহত আবু সাঈদ | Sayed | Rangpur | Channel 24</h3>
+                    <p class="text-sm text-gray-600 mb-1">Channel 24</p>
+                    <p class="text-sm text-gray-600">2M views • 2 days ago</p>
+                </div>
+            </div>
+            <!-- Video Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/Rf4rU1hwQXc/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsOgfUhEDwvNwQGk9HoUOMGogYrg" alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">#1 How to Start a Business with No Money? By Sandeep Maheshwari I Hindi #businessideas</h3>
+                    <p class="text-sm text-gray-600 mb-1">
+                      Sandeep Maheshwari
+                      </p>
+                    <p class="text-sm text-gray-600">500K views • 3 days ago</p>
+                </div>
+            </div>
+            <!-- Video Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/5z2EQBSssy8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAApkQJGzHnfYZKY0LMJbJCqEN1Fg" alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">অনলাইনে যা দেখছেন সব গুজব: ডিবিপ্রধান হারুন | DB Chief Harun | Banglavision News</h3>
+                    <p class="text-sm text-gray-600 mb-1">BanglaVision NEWS
+                    </p>
+                    <p class="text-sm text-gray-600">3M views • 4 days ago</p>
+                </div>
+            </div>
+            <!-- Video Card 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/IBGvZjBAIV0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPXIN7serq1MGe3zqbI1kIPzM3EA"alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">নতুন কর্মসূচি দিল বৈষম্যবিরোধী ছাত্র আন্দোলন | Quota Movement | Kalbela</h3>
+                    <p class="text-sm text-gray-600 mb-1">Kalbela News
+                    </p>
+                    <p class="text-sm text-gray-600">1.5M views • 4 hours ago</p>
+                </div>
+            </div>
+            <!-- Video Card 6 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden video-card">
+                <img class="w-full" src="https://i.ytimg.com/vi/LIar59yD1y4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7lNmjU_yBd78X0nu9W5rdLmuC2w" alt="Video Thumbnail">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Tut Jaaye Raja Ji_By JADUNI MWSAMUNG BODOL || 3RD BUISU FESTIVAL 2024 || AT Hailakandi Assam</h3>
+                    <p class="text-sm text-gray-600 mb-1">MAMITA MUSIC</p>
+                    <p class="text-sm text-gray-600">2.5M views • 6 days ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
