@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youtueb Clone</title>
-  <link rel="shortcut icon" href="https://thumbs.dreamstime.com/b/youtube-icon-illustration-youtube-app-logo-social-media-icon-youtube-icon-illustration-youtube-app-logo-social-media-icon-305513185.jpg" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <h1> Youtube clone </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtueb Clone</title>
+    <link
+      rel="shortcut icon"
+      href="https://thumbs.dreamstime.com/b/youtube-icon-illustration-youtube-app-logo-social-media-icon-youtube-icon-illustration-youtube-app-logo-social-media-icon-305513185.jpg"
+      type="image/x-icon"
+    />
+    <!-- font awesome cdn  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--  Youtube navbar  -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+              <div class="flex items-center">
+                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
+                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                      </svg>
+                  </button>
+                  <a href="#" class="ml-4">
+                      <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+                  </a>
+              </div>
+              <div class="flex-1 flex items-center justify-center px-2">
+                  <div class="max-w-lg w-full lg:max-w-xs">
+                      <label for="search" class="sr-only">Search</label>
+                      <div class="relative">
+                          <input id="search" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-500 sm:text-sm" placeholder="Search" type="search">
+                          <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                              <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M13 7a6 6 0 11-12 0 6 6 0 0112 0zm-1 8a8 8 0 110-16 8 8 0 010 16z" clip-rule="evenodd"></path>
+                              </svg>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
+                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                  </button>
+                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
+                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h18M3 12h18m-9 4h9"></path>
+                      </svg>
+                  </button>
+                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
+                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                      </svg>
+                  </button>
+                  <button class="text-gray-600 focus:outline-none focus:text-gray-900">
+                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18l9-9 9 9V3z"></path>
+                      </svg>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </nav>
+  </body>
 </html>
